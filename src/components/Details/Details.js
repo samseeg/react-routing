@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 
 import './Details.css';
 
+import {Link} from 'react-router-dom';
+
 function Details( { swag, history, addToCart } ) {
 
   function addAndRedirect() {
@@ -13,7 +15,9 @@ function Details( { swag, history, addToCart } ) {
 
   return (
     <div id="Details__container">
+      <Link to='/' id='Details_storeLink'>
       <p> { '<' } Back to store </p>
+      </Link>
       <img id="Details__img" src={ swag.img } alt="Product" width="400px" />
       <p id="Details__title"> { swag.title } </p>
       <p id="Details__price"> ${ swag.price } </p>
